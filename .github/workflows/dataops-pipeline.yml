@@ -2,24 +2,31 @@ name: DataOps Pipeline - Base
 on:
 workflow_dispatch:
 push:
-branches: [ &quot;main&quot; ]
+branches: [ "main" ]
 jobs:
-lifecycle:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout repository
-uses: actions/checkout@v4
-- name: Show framework structure
-run: |
-echo &quot;�� Data &amp; Analytics lifecycle structure:&quot;
-tree framework || ls framework
-- name: Ingestion stage (placeholder)
-run: echo &quot;Ingestion stage - pending implementation&quot;
-- name: Processing stage (placeholder)
-run: echo &quot;Processing stage - pending implementation&quot;
-- name: Validation &amp; Testing stage (placeholder)
-run: echo &quot;Validation &amp; Testing stage - pending implementation&quot;
-- name: Deployment stage (placeholder)
-run: echo &quot;Deployment stage - pending implementation&quot;
-- name: Continuous Monitoring stage (placeholder)
-run: echo &quot;Monitoring stage - pending implementation&quot;
+  lifecycle:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Show framework structure
+      run: |
+        echo "Data & Analytics lifecycle structure:"
+        tree framework || ls framework
+
+    - name: Ingestion stage (placeholder)
+      run: echo "Ingestion stage - pending implementation"
+    
+    - name: Processing stage (placeholder)
+      run: echo "Processing stage - pending implementation"
+    
+    - name: Validation & Testing stage (placeholder)
+      run: echo "Validation & Testing stage - pending implementation"
+    
+    - name: Deployment stage (placeholder)
+      run: echo "Deployment stage - pending implementation"
+    
+    - name: Continuous Monitoring stage (placeholder)
+      run: echo "Monitoring stage - pending implementation"
